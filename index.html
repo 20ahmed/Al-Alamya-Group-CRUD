@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.css" />
+    <link rel="stylesheet" href="animate.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>CRUD</title>
+</head>
+
+<body>
+
+    <nav>
+        <input type="checkbox" name="" id="check">
+        <label for="check" class="checkBtn">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+        <label class="logo  animate__animated  animate__heartBeat ">العالميه جروب</label>
+        <ul>
+            <li><a href="#section_5ID">تواصل معنا</a></li>
+            <li><a href="#section_4ID">اعمالنا</a></li>
+            <li><a href="#section_3ID">الخدمات</a></li>
+            <li><a href="#section_2ID">عنا</a></li>
+            <li><a class="active" href="">الرئيسيه</a></li>
+
+
+
+
+        </ul>
+    </nav>
+    <div class="container py-3 mt-3">
+        <div class="form-group">
+            <label for="">:اسم المنتج</label>
+            <input onkeyup="validateForm(this.value)" class="form-control" id="productNameInp">
+            <small class="text-muted">must be 8~20 character</small>
+        </div>
+        <div class="form-group">
+            <label for="">:سعر المنتج</label>
+            <input class="form-control" id="productPriceInp">
+        </div>
+        <div class="form-group">
+            <label for="">:اسم الفئه</label>
+            <input class="form-control" id="productCatInp">
+        </div>
+
+        <div class="form-group">
+            <label for="">: كود المنتج</label>
+            <input class="form-control" id="productCodeInp">
+        </div>
+
+        <div class="form-group">
+            <label for="">product title :</label>
+            <input class="form-control" id="productTitleInp">
+        </div>
+
+        <div class="form-group">
+            <label for="">وصف المنتج</label>
+            <textarea class="form-control" id="productDescInp"></textarea>
+        </div>
+
+        <button id="btn" onclick="addProduct()" class="btn btn-info  my-3   mb-3 float-left ">Add Product</button>
+        <div class="clearfix"></div>
+
+
+
+    </div>
+
+    <div class="container">
+        <input placeholder="search By Name" class="form-control" onkeyup="searchProduct(this.value)" type="text">
+
+        <h2 class="text-center my-4">منتجاتنا</h2>
+        <div class="row" id="product_container">
+
+
+        </div>
+        <div class="empty bg-danger text-center p-5 text-light" id="emptyDiv">لم يتم إضافه منتجات </div>
+    </div>
+    <!-- ----------------------------- عنا ------------------------------- -->
+    <div class="container my-5 " id="section_2ID">
+        <div class="alert alert-warning text-center my-4"> نبذه عن الشركه</div>
+        <div class="alert alert-danger text-right  animate__animated    animate__backInUp p-4 txt ">تأسست شركة
+            العالميه جروب
+            التى تتخذ من الجيزه مقرا رئيسيا
+            لها عام
+            2007. وفى ظل نجاحها فى تنفيذ
+            جميع خدمات الصيانه و البيع و الشراء ل اجهزه الحاسب الألي و اللابتوب بجميع انواعهم
+            . استطاعت الشركة أن تتبؤ
+            مكانة متميزة بين مثيلاتها فى نفس المجال جعلتها بين الأفضل على الإطلاق ومن ثم ستقوم الشركة قريبا بفتح
+            فروع اخري لها فى كافه محافظات مصر
+            وتمتلك شركة العالميه جروب فريق عمل متكامل.</div>
+    </div>
+    <!------------------------------------------------ خدمات --------------------------------------------------------------->
+    <div class="container my-5" id="section_3ID">
+        <div class=" alert alert-warning text-center my-5"> الخدمات </div>
+        <ul class=" list-group list-group-flush text-right">
+            <li class="list-group-item  animate__animated animate__backInLeft "> .“Laptop maintenance“ تقدم شركه
+                العالميه جروب صيانة اللاب توب
+            </li>
+            <li class="list-group-item animate__animated animate__backInLeft">تقوم الشركة بتوفير قطع الغيار الاصليه
+                والمعتمدة لضمان اعلي مستوي من الجودة
+                للمنتج
+                بعد الصيانة وتقدم الشركة قطع الغيار الاصلية بسعر التكلفة</li>
+            <li class="list-group-item animate__animated animate__backInRight">كما ان الشركة هي الرائدة في صيانة جميع
+                أجهزة الحاسوب واللابتوب و تضمن لك صيانة
+                جهازك
+                بكفاءة عالية</li>
+            <li class="list-group-item animate__animated animate__fadeInLeft">يقوم مركز الصيانة باستبدال قطع الغيار
+                التالفة بأخري أصلية وهذا لاتجده في
+                مراكزالصيانة الغير معتمدة كما تضمن لك الشركة الحصول علي القطع الأصلية مع ضمان ما بعد التصليح والصيانة
+            </li>
+
+        </ul>
+    </div>
+
+    <!------------------------------------------- footer--------------------- -->
+    <div class="container-fluid  ">
+        <div class="container d-flex justify-content-between py-4">
+            <div class="col"><img src="imges/" alt="">
+                <h3>contact</h3>
+                <ul class="list-unstyled">
+                    <li>21 ahmed maher street</li>
+                    <li>01116899720</li>
+                    <li>support @company.com</li>
+                </ul>
+
+            </div>
+            <div class="col">
+                <h3>about the company</h3>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis cumque temporibus cupiditate
+                exercitationem. Sed delectus, impedit ipsum odit mollitia quasi. Nostrum beatae saepe rem, laboriosam
+                tenetur fugit at delectus odit.
+            </div>
+
+
+        </div>
+
+
+    </div>
+    <script src="wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <script src=" js/main.js">
+    </script>
+</body>
+
+</html>

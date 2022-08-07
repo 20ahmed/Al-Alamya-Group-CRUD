@@ -1,0 +1,161 @@
+* {
+  padding: 0;
+  margin: 0;
+  display: flexbox;
+  scroll-behavior: smooth;
+}
+/*______________________________NAV BAR  ________________________________*/
+nav {
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 80px;
+  width: 100%;
+}
+
+label.logo {
+  float: left;
+  color: white;
+  font-size: 20px;
+  line-height: 80px;
+  padding: 0 50px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+label.logo:hover {
+  transition: all 1.5s ease-in-out;
+  transform: rotate3d(1, 1, 1, 360deg);
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #1b9bff;
+}
+
+nav ul {
+  float: right;
+  margin-right: 20px;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+  transition: all 1s;
+}
+
+nav ul li a {
+  color: white;
+  text-transform: uppercase;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-decoration: none;
+  transition: all 1s;
+}
+
+a.active,
+a:hover {
+  background-color: #1b9bff;
+  text-decoration: none;
+  color: white;
+}
+
+.checkBtn {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+@media (max-width: 952px) {
+  label.logo {
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+  .icns {
+    position: absolute;
+    bottom: 30%;
+    right: 0vw;
+    list-style: none;
+    z-index: 1000;
+  }
+}
+
+@media (max-width: 858px) {
+  .checkBtn {
+    display: block;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    margin: 30px 20px 0 0;
+    line-height: 30px;
+  }
+
+  .icns {
+    position: absolute;
+    bottom: 30%;
+    right: 0px;
+    list-style: none;
+    z-index: 1000;
+  }
+  nav ul {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.99);
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.8s;
+    z-index: 999;
+  }
+
+  nav ul li {
+    display: block;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+  }
+  a:hover,
+  a.active {
+    background-color: none;
+    color: white;
+  }
+
+  #check:checked ~ ul {
+    left: 0px;
+  }
+}
+
+/*------------------------------------------------------------------*/
+
+.product {
+  position: relative;
+}
+
+.price {
+  background-color: tomato;
+  position: absolute;
+  top: 0;
+  right: 0px;
+}
+
+label {
+  float: right;
+}
+
+.empty {
+  display: none;
+}
+
+.txt {
+  line-height: 3rem;
+}
